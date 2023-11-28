@@ -1,0 +1,9 @@
+name: libpam-ssh
+on: push
+jobs:
+  build_pkg:
+    uses: gardenlinux/package-build/.github/workflows/build_pkg.yml@main
+    with:
+      source: libpam-ssh/unstable
+      build_options: nocheck noudeb terse
+      build_profiles: nocheck noudeb
